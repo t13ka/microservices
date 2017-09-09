@@ -1,5 +1,7 @@
 ﻿namespace AuthService.Api
 {
+    using AuthService.Core.ConfigSections;
+
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
@@ -34,6 +36,8 @@
         /// </param>
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<DatabaseSettings>(Configuration.GetSection("DatabaseSettings"));
+
             services.AddMvc();
         }
 
