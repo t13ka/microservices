@@ -12,3 +12,8 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "33001:80"
+
+  authservice.database:
+    image: mongo:latest
+    ports:
+      - "33002:27017"
