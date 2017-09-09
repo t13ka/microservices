@@ -5,13 +5,9 @@
     using System.Linq.Expressions;
 
     /// <summary>
-    /// The Repository interface.
+    /// The UserService interface.
     /// </summary>
-    /// <typeparam name="T">
-    /// some type
-    /// </typeparam>
-    public interface IRepository<T>
-        where T : IEntity
+    public interface IUsersService
     {
         /// <summary>
         /// Get count
@@ -25,7 +21,7 @@
         /// Create instance
         /// </summary>
         /// <param name="entity"></param>
-        void Create(T entity);
+        void Create(IUser entity);
 
         /// <summary>
         /// Update instance
@@ -37,9 +33,9 @@
         /// The get all.
         /// </summary>
         /// <returns>
-        /// The <see cref="IList"/>.
+        /// The <see cref="IList{T}"/>.
         /// </returns>
-        IList<T> GetAll();
+        IList<IUser> GetAll();
 
         /// <summary>
         /// The get by id.
@@ -50,13 +46,13 @@
         /// <returns>
         /// The <see cref="T"/>.
         /// </returns>
-        T GetById(string id);
+        IUser GetById(string id);
 
         /// <summary>
         /// Update instance
         /// </summary>
         /// <param name="entity"></param>
-        void Replace(T entity);
+        void Replace(IUser entity);
 
         /// <summary>
         /// The search for.
@@ -65,14 +61,14 @@
         /// The predicate.
         /// </param>
         /// <returns>
-        /// The <see cref="IList"/>.
+        /// The <see cref="IList{T}"/>.
         /// </returns>
-        IList<T> SearchFor(Expression<Func<T, bool>> predicate);
+        IList<IUser> SearchFor(Expression<Func<IUser, bool>> predicate);
 
         /// <summary>
         /// Update instance
         /// </summary>
         /// <param name="entity"></param>
-        void Update(T entity);
+        void Update(IUser entity);
     }
 }

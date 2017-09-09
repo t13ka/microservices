@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthService.Api", "AuthServ
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auth microservice", "Auth microservice", "{43B8DD19-499A-4BFC-A03F-F6EA689369D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthService.Core", "AuthService.Core\AuthService.Core.csproj", "{68030840-A6DC-4EB8-BB16-326802E52013}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthService.Core", "AuthService.Core\AuthService.Core.csproj", "{68030840-A6DC-4EB8-BB16-326802E52013}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthService.Database", "AuthService.Database\AuthService.Database.csproj", "{7F325AD5-B0C1-4B63-97B5-FA554216F5DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthService.Services", "AuthService.Services\AuthService.Services.csproj", "{30039C56-690D-4FD9-AA7E-E3A308D98756}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +37,10 @@ Global
 		{68030840-A6DC-4EB8-BB16-326802E52013}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68030840-A6DC-4EB8-BB16-326802E52013}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68030840-A6DC-4EB8-BB16-326802E52013}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7F325AD5-B0C1-4B63-97B5-FA554216F5DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7F325AD5-B0C1-4B63-97B5-FA554216F5DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7F325AD5-B0C1-4B63-97B5-FA554216F5DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7F325AD5-B0C1-4B63-97B5-FA554216F5DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30039C56-690D-4FD9-AA7E-E3A308D98756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30039C56-690D-4FD9-AA7E-E3A308D98756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30039C56-690D-4FD9-AA7E-E3A308D98756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30039C56-690D-4FD9-AA7E-E3A308D98756}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,7 +48,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{00E790C1-BD4C-4705-9204-8E7916217850} = {43B8DD19-499A-4BFC-A03F-F6EA689369D1}
 		{68030840-A6DC-4EB8-BB16-326802E52013} = {43B8DD19-499A-4BFC-A03F-F6EA689369D1}
-		{7F325AD5-B0C1-4B63-97B5-FA554216F5DF} = {43B8DD19-499A-4BFC-A03F-F6EA689369D1}
+		{30039C56-690D-4FD9-AA7E-E3A308D98756} = {43B8DD19-499A-4BFC-A03F-F6EA689369D1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9D5F500D-FB46-4D9A-A4CC-9A44D93ED7B7}

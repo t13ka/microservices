@@ -1,4 +1,4 @@
-﻿namespace AuthService.Database
+﻿namespace AuthService.Services.Database
 {
     using System;
     using System.Collections.Generic;
@@ -19,7 +19,7 @@
     /// <typeparam name="T">
     /// Type of current entity
     /// </typeparam>
-    public class BaseRepository<T> : IRepository<T>
+    internal class BaseRepository<T> : IRepository<T>
         where T : IEntity
     {
         /// <summary>
@@ -39,7 +39,12 @@
 
             var client = new MongoClient(databaseSettings.ConnectionString);
             var database = client.GetDatabase(databaseSettings.DatabaseName);
-            _collection = database.GetCollection<T>(typeof(T).Name.ToLower() + "s");
+
+            var type = typeof(T);
+            var collectionNameWithoutI = type.Name.Remove(0, 1);
+            var finalCollectionName = collectionNameWithoutI.ToLower() + "s";
+
+            _collection = database.GetCollection<T>(finalCollectionName);
         }
 
         /// <summary>

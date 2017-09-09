@@ -13,8 +13,13 @@ W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Api\bin\Deb
 W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Api\bin\Debug\netcoreapp2.0\AuthService.Api.runtimeconfig.dev.json
 W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Api\bin\Debug\netcoreapp2.0\AuthService.Api.dll
 W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Api\bin\Debug\netcoreapp2.0\AuthService.Api.pdb
+W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Api\bin\Debug\netcoreapp2.0\AuthService.Core.dll
+W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Api\bin\Debug\netcoreapp2.0\AuthService.Core.pdb
+W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Api\obj\Debug\netcoreapp2.0\AuthService.Api.csprojResolveAssemblyReference.cache
 W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Api\obj\Debug\netcoreapp2.0\AuthService.Api.csproj.CoreCompileInputs.cache
 W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Api\obj\Debug\netcoreapp2.0\AuthService.Api.AssemblyInfoInputs.cache
 W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Api\obj\Debug\netcoreapp2.0\AuthService.Api.AssemblyInfo.cs
 W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Api\obj\Debug\netcoreapp2.0\AuthService.Api.dll
 W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Api\obj\Debug\netcoreapp2.0\AuthService.Api.pdb
+W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Api\bin\Debug\netcoreapp2.0\AuthService.Services.dll
+W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Api\bin\Debug\netcoreapp2.0\AuthService.Services.pdb

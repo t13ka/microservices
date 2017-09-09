@@ -1,4 +1,4 @@
-﻿namespace AuthService.Database
+﻿namespace AuthService.Services.Domain
 {
     using AuthService.Core;
 
