@@ -6,3 +6,9 @@ services:
     build:
       context: ./SimpleArchitecture
       dockerfile: Dockerfile
+
+  authservice:
+    image: authservice
+    build:
+      context: ./AuthService
+      dockerfile: Dockerfile
