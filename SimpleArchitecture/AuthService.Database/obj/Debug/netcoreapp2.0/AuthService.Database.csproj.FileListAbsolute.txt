@@ -1,8 +1,0 @@
-W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Database\bin\Debug\netcoreapp2.0\AuthService.Database.deps.json
-W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Database\bin\Debug\netcoreapp2.0\AuthService.Database.dll
-W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Database\bin\Debug\netcoreapp2.0\AuthService.Database.pdb
-W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Database\obj\Debug\netcoreapp2.0\AuthService.Database.csproj.CoreCompileInputs.cache
-W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Database\obj\Debug\netcoreapp2.0\AuthService.Database.AssemblyInfoInputs.cache
-W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Database\obj\Debug\netcoreapp2.0\AuthService.Database.AssemblyInfo.cs
-W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Database\obj\Debug\netcoreapp2.0\AuthService.Database.dll
-W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Database\obj\Debug\netcoreapp2.0\AuthService.Database.pdb
