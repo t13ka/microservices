@@ -1,8 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace AuthService.Controllers
+﻿namespace AuthService.Api.Controllers
 {
     using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Mvc;
 
     /// <summary>
     /// The health controller.

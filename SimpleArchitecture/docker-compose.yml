@@ -10,5 +10,5 @@ services:
   authservice:
     image: authservice
     build:
-      context: ./AuthService
+      context: ./AuthService.Api
       dockerfile: Dockerfile

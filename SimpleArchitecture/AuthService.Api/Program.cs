@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-
-namespace AuthService
+﻿namespace AuthService.Api
 {
+    using Microsoft.AspNetCore;
+    using Microsoft.AspNetCore.Hosting;
+
     /// <summary>
     /// The program.
     /// </summary>

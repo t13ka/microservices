@@ -12542,11 +12542,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "W:\\Projects\\Repos\\t13ka\\microservices\\SimpleArchitecture\\AuthService\\AuthService.csproj",
-      "projectName": "AuthService",
-      "projectPath": "W:\\Projects\\Repos\\t13ka\\microservices\\SimpleArchitecture\\AuthService\\AuthService.csproj",
+      "projectUniqueName": "W:\\Projects\\Repos\\t13ka\\microservices\\SimpleArchitecture\\AuthService.Api\\AuthService.Api.csproj",
+      "projectName": "AuthService.Api",
+      "projectPath": "W:\\Projects\\Repos\\t13ka\\microservices\\SimpleArchitecture\\AuthService.Api\\AuthService.Api.csproj",
       "packagesPath": "C:\\Users\\DNS\\.nuget\\packages\\",
-      "outputPath": "W:\\Projects\\Repos\\t13ka\\microservices\\SimpleArchitecture\\AuthService\\obj\\",
+      "outputPath": "W:\\Projects\\Repos\\t13ka\\microservices\\SimpleArchitecture\\AuthService.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

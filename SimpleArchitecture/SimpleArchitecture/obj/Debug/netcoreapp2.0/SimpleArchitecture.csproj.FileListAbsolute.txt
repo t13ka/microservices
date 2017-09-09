@@ -3,7 +3,6 @@ W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\SimpleArchitecture\bin\
 W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\SimpleArchitecture\bin\Debug\netcoreapp2.0\SimpleArchitecture.runtimeconfig.dev.json
 W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\SimpleArchitecture\bin\Debug\netcoreapp2.0\SimpleArchitecture.dll
 W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\SimpleArchitecture\bin\Debug\netcoreapp2.0\SimpleArchitecture.pdb
-W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\SimpleArchitecture\obj\Debug\netcoreapp2.0\SimpleArchitecture.csprojResolveAssemblyReference.cache
 W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\SimpleArchitecture\obj\Debug\netcoreapp2.0\SimpleArchitecture.csproj.CoreCompileInputs.cache
 W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\SimpleArchitecture\obj\Debug\netcoreapp2.0\SimpleArchitecture.AssemblyInfoInputs.cache
 W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\SimpleArchitecture\obj\Debug\netcoreapp2.0\SimpleArchitecture.AssemblyInfo.cs
