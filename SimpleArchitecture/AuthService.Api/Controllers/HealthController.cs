@@ -1,13 +1,17 @@
 ﻿namespace AuthService.Api.Controllers
 {
     using System;
+    using System.Net;
 
+    using AuthService.Api.Dto.Response;
     using AuthService.Core;
     using AuthService.Services.Database;
     using AuthService.Services.Domain;
 
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
+
+    using Swashbuckle.AspNetCore.SwaggerGen;
 
     /// <summary>
     /// The health controller.
@@ -39,12 +43,13 @@
         /// The <see cref="IActionResult"/>.
         /// </returns>
         [HttpGet]
+        [SwaggerResponse((int)HttpStatusCode.OK, Description = "Health", Type = typeof(HealthResponseDto))]
         public IActionResult Get()
         {
             // example:
             // _usersService.Create(new User { _id = Guid.NewGuid().ToString(), Email = "test@mail.com", Name = "tester" });
             // var result = _usersService.SearchFor(t => t._id == "97db11fd-29cf-4398-9a97-fce60e503f0d");
-            return Ok(new { Message = "I'm ok" });
+            return Ok(new HealthResponseDto { Message = "I'm ok" });
         }
     }
 }

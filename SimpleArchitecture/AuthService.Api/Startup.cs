@@ -1,5 +1,8 @@
 ﻿namespace AuthService.Api
 {
+    using System;
+    using System.IO;
+
     using AuthService.Core;
     using AuthService.Core.ConfigSections;
     using AuthService.Services;
@@ -8,6 +11,8 @@
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
+
+    using Swashbuckle.AspNetCore.Swagger;
 
     /// <summary>
     /// The startup.
@@ -43,6 +48,25 @@
             services.AddSingleton<IUsersService, UsersService>();
 
             services.AddMvc();
+            services.AddSwaggerGen(
+                c =>
+                    {
+                        c.SwaggerDoc(
+                            "v1",
+                            new Info
+                                {
+                                    Title = "Auth service",
+                                    Version = "v1",
+                                    Description = "Service for auth operations",
+                                });
+
+                        var filePath = Path.Combine(
+                            Environment.CurrentDirectory,
+                            "AuthService.Api.xml");
+                        c.IncludeXmlComments(filePath);
+                        c.DescribeStringEnumsInCamelCase();
+                    });
+
         }
 
         /// <summary>
@@ -62,6 +86,10 @@
             }
 
             app.UseMvc();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your api V1"); });
         }
     }
 }
