@@ -12,7 +12,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Dto\Request\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

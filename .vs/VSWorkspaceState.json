@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SimpleArchitecture",
+    "\\SimpleArchitecture\\AuthService.Api",
+    "\\SimpleArchitecture\\AuthService.Services\\Database"
   ],
+  "SelectedNode": "\\SimpleArchitecture\\AuthService.Api\\Startup.cs",
   "PreviewInSolutionExplorer": false
 }

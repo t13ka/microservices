@@ -1,33 +1,22 @@
 ﻿namespace AuthService.Services.Domain
 {
     using AuthService.Core;
+    using AuthService.Services.Database;
 
     using MongoDB.Bson.Serialization.Attributes;
 
     /// <summary>
     /// The user.
     /// </summary>
-    public class User : IUser
+    public class User : IEntity
     {
-        /// <summary>
-        /// Gets or sets the _id.
-        /// </summary>
-        [BsonId]
-        public string _id { get; set; }
+        [BsonId(IdGenerator = typeof(AutoIncrementIdGenerator<User>), Order = 0)]
+        public long Id { get; set; }
 
-        /// <summary>
-        /// Gets or sets the name.
-        /// </summary>
         public string Name { get; set; }
 
-        /// <summary>
-        /// Gets or sets the email.
-        /// </summary>
         public string Email { get; set; }
 
-        /// <summary>
-        /// Gets or sets the password hash.
-        /// </summary>
         public string PasswordHash { get; set; }
     }
 }

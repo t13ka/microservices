@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AuthService.Api</name>
+    </assembly>
+    <members>
+        <member name="T:AuthService.Api.Controllers.HealthController">
+            <summary>
+            The health controller.
+            </summary>
+        </member>
+        <member name="F:AuthService.Api.Controllers.HealthController._usersService">
+            <summary>
+            The users service.
+            </summary>
+        </member>
+        <member name="M:AuthService.Api.Controllers.HealthController.#ctor(AuthService.Services.IUsersService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AuthService.Api.Controllers.HealthController"/> class.
+            </summary>
+            <param name="usersService">
+            The user service.
+            </param>
+        </member>
+        <member name="M:AuthService.Api.Controllers.HealthController.Get">
+            <summary>
+            The get.
+            </summary>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.
+            </returns>
+        </member>
+        <member name="T:AuthService.Api.Controllers.JwtTokenController">
+            <summary>
+            The jwt token controller.
+            </summary>
+        </member>
+        <member name="T:AuthService.Api.Controllers.RegistrationController">
+            <summary>
+            The registration controller.
+            </summary>
+        </member>
+        <member name="M:AuthService.Api.Controllers.RegistrationController.#ctor(AuthService.Services.IUsersService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AuthService.Api.Controllers.RegistrationController"/> class.
+            </summary>
+            <param name="usersService">
+            The users service.
+            </param>
+        </member>
+        <member name="T:AuthService.Api.Dto.Request.GetJwtTokenRequest">
+            <summary>
+            The get jwt token request.
+            </summary>
+        </member>
+        <member name="P:AuthService.Api.Dto.Request.GetJwtTokenRequest.Login">
+            <summary>
+            Gets or sets the login.
+            </summary>
+        </member>
+        <member name="P:AuthService.Api.Dto.Request.GetJwtTokenRequest.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+        </member>
+        <member name="T:AuthService.Api.Dto.Request.NewUserRegistrationRequest">
+            <summary>
+            The new user registration request.
+            </summary>
+        </member>
+        <member name="P:AuthService.Api.Dto.Request.NewUserRegistrationRequest.Email">
+            <summary>
+            Gets or sets the email.
+            </summary>
+        </member>
+        <member name="P:AuthService.Api.Dto.Request.NewUserRegistrationRequest.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+        </member>
+        <member name="P:AuthService.Api.Dto.Request.NewUserRegistrationRequest.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="T:AuthService.Api.Dto.Response.HealthResponseDto">
+            <summary>
+            The health response dto.
+            </summary>
+        </member>
+        <member name="P:AuthService.Api.Dto.Response.HealthResponseDto.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+        </member>
+        <member name="T:AuthService.Api.Program">
+            <summary>
+            The program.
+            </summary>
+        </member>
+        <member name="M:AuthService.Api.Program.Main(System.String[])">
+            <summary>
+            The main.
+            </summary>
+            <param name="args">
+            The args.
+            </param>
+        </member>
+        <member name="M:AuthService.Api.Program.BuildWebHost(System.String[])">
+            <summary>
+            The build web host.
+            </summary>
+            <param name="args">
+            The args.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHost"/>.
+            </returns>
+        </member>
+        <member name="T:AuthService.Api.Startup">
+            <summary>
+            The startup.
+            </summary>
+        </member>
+        <member name="M:AuthService.Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AuthService.Api.Startup"/> class.
+            </summary>
+            <param name="configuration">
+            The configuration.
+            </param>
+        </member>
+        <member name="P:AuthService.Api.Startup.Configuration">
+            <summary>
+            Gets the configuration.
+            </summary>
+        </member>
+        <member name="M:AuthService.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="M:AuthService.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">
+            The app.
+            </param>
+            <param name="env">
+            The env.
+            </param>
+        </member>
+    </members>
+</doc>

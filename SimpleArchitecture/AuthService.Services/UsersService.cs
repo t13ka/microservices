@@ -5,9 +5,9 @@ namespace AuthService.Services
     using System.Collections.Generic;
     using System.Linq.Expressions;
 
-    using AuthService.Core;
     using AuthService.Core.ConfigSections;
     using AuthService.Services.Database.Collections;
+    using AuthService.Services.Domain;
 
     using Microsoft.Extensions.Options;
 
@@ -16,9 +16,6 @@ namespace AuthService.Services
     /// </summary>
     public class UsersService : IUsersService
     {
-        /// <summary>
-        /// The _users collection.
-        /// </summary>
         private readonly UsersCollection _usersCollection;
 
         /// <summary>
@@ -32,98 +29,42 @@ namespace AuthService.Services
             _usersCollection = new UsersCollection(databaseSettingsOptions);
         }
 
-        /// <summary>
-        /// The count.
-        /// </summary>
-        /// <returns>
-        /// The <see cref="long"/>.
-        /// </returns>
         public long Count()
         {
             return _usersCollection.Count();
         }
 
-        /// <summary>
-        /// The create.
-        /// </summary>
-        /// <param name="entity">
-        /// The entity.
-        /// </param>
-        /// <exception cref="NotImplementedException">
-        /// </exception>
-        public void Create(IUser entity)
+        public void Create(User entity)
         {
             _usersCollection.Create(entity);
         }
 
-        /// <summary>
-        /// The delete.
-        /// </summary>
-        /// <param name="id">
-        /// The id.
-        /// </param>
-        public void Delete(string id)
+        public void Delete(long id)
         {
             _usersCollection.Delete(id);
         }
 
-        /// <summary>
-        /// The get all.
-        /// </summary>
-        /// <returns>
-        /// The <see cref="IList"/>.
-        /// </returns>
-        public IList<IUser> GetAll()
+        public IList<User> GetAll()
         {
             return _usersCollection.GetAll();
         }
 
-        /// <summary>
-        /// The get by id.
-        /// </summary>
-        /// <param name="id">
-        /// The id.
-        /// </param>
-        /// <returns>
-        /// The <see cref="IUser"/>.
-        /// </returns>
-        public IUser GetById(string id)
+        public User GetById(long id)
         {
             return _usersCollection.GetById(id);
         }
 
-        /// <summary>
-        /// The replace.
-        /// </summary>
-        /// <param name="entity">
-        /// The entity.
-        /// </param>
-        public void Replace(IUser entity)
+        public void Replace(User entity)
         {
             _usersCollection.Replace(entity);
         }
 
-        /// <summary>
-        /// The search for.
-        /// </summary>
-        /// <param name="predicate">
-        /// The predicate.
-        /// </param>
-        /// <returns>
-        /// The <see cref="IList"/>.
-        /// </returns>
-        public IList<IUser> SearchFor(Expression<Func<IUser, bool>> predicate)
+        public IList<User> SearchFor(Expression<Func<User, bool>> predicate)
         {
             return _usersCollection.SearchFor(predicate);
         }
 
-        /// <summary>
-        /// The update.
-        /// </summary>
-        /// <param name="entity">
-        /// The entity.
-        /// </param>
-        public void Update(IUser entity)
+        public void Update(User entity)
         {
             _usersCollection.Update(entity);
         }

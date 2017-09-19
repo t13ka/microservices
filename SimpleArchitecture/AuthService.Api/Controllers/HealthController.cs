@@ -1,12 +1,9 @@
 ﻿namespace AuthService.Api.Controllers
 {
-    using System;
     using System.Net;
 
     using AuthService.Api.Dto.Response;
-    using AuthService.Core;
-    using AuthService.Services.Database;
-    using AuthService.Services.Domain;
+    using AuthService.Services;
 
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;

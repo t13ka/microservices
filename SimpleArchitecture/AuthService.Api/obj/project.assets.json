@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "CryptoHelper/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoHelper.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoHelper.dll": {}
+        }
+      },
       "Libuv/1.10.0": {
         "type": "package",
         "dependencies": {
@@ -4970,8 +4982,10 @@
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
           "AuthService.Core": "1.0.0",
+          "CryptoHelper": "3.0.0",
           "Microsoft.Extensions.Options": "2.0.0",
-          "MongoDB.Driver": "2.4.4"
+          "MongoDB.Driver": "2.4.4",
+          "System.IdentityModel.Tokens.Jwt": "5.1.4"
         },
         "compile": {
           "bin/placeholder/AuthService.Services.dll": {}
@@ -4983,6 +4997,17 @@
     }
   },
   "libraries": {
+    "CryptoHelper/3.0.0": {
+      "sha512": "CUCXoKUZ1XQSU5+TL2p5BkA6hSLHF4aBaSRNbxzTLQ6MPf1PEBLI1AH636ptL5iz0gYVieWWZu43Qn5j49LE/A==",
+      "type": "package",
+      "path": "cryptohelper/3.0.0",
+      "files": [
+        "cryptohelper.3.0.0.nupkg.sha512",
+        "cryptohelper.nuspec",
+        "lib/netstandard2.0/CryptoHelper.dll",
+        "lib/netstandard2.0/CryptoHelper.xml"
+      ]
+    },
     "Libuv/1.10.0": {
       "sha512": "GsCf4q+eyaI49rCPlgYxdxa1SQCysXFFdSJWdstrwxytg4+VPYLYrXD4AT2rjHVJ+UF7SSWX9CapWEYaU4ejVQ==",
       "type": "package",

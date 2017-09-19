@@ -1,14 +1,14 @@
 ﻿namespace AuthService.Services.Database.Collections
 {
-    using AuthService.Core;
     using AuthService.Core.ConfigSections;
+    using AuthService.Services.Domain;
 
     using Microsoft.Extensions.Options;
 
     /// <summary>
     /// The users collection.
     /// </summary>
-    internal class UsersCollection : BaseRepository<IUser>
+    internal class UsersCollection : BaseRepository<User>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsersCollection"/> class.

@@ -22,9 +22,6 @@
     internal class BaseRepository<T> : IRepository<T>
         where T : IEntity
     {
-        /// <summary>
-        /// The _collection.
-        /// </summary>
         private readonly IMongoCollection<T> _collection;
 
         /// <summary>
@@ -36,95 +33,43 @@
         protected BaseRepository(IOptions<DatabaseSettings> databaseSettingsOptions)
         {
             var databaseSettings = databaseSettingsOptions.Value;
-
             var client = new MongoClient(databaseSettings.ConnectionString);
             var database = client.GetDatabase(databaseSettings.DatabaseName);
-
             var type = typeof(T);
-            var collectionNameWithoutI = type.Name.Remove(0, 1);
-            var finalCollectionName = collectionNameWithoutI.ToLower() + "s";
-
+            var finalCollectionName = type.Name.ToLower() + "s";
             _collection = database.GetCollection<T>(finalCollectionName);
         }
 
-        /// <summary>
-        /// The count.
-        /// </summary>
-        /// <returns>
-        /// The <see cref="long"/>.
-        /// </returns>
         public virtual long Count()
         {
             return _collection.Count(new BsonDocument());
         }
 
-        /// <summary>
-        /// The create.
-        /// </summary>
-        /// <param name="entity">
-        /// The entity.
-        /// </param>
         public virtual void Create(T entity)
         {
             _collection.InsertOne(entity);
         }
 
-        /// <summary>
-        /// The delete.
-        /// </summary>
-        /// <param name="id">
-        /// The id.
-        /// </param>
-        public virtual void Delete(string id)
+        public virtual void Delete(long id)
         {
-            _collection.DeleteOne(t => t._id == id);
+            _collection.DeleteOne(t => t.Id == id);
         }
 
-        /// <summary>
-        /// The get all.
-        /// </summary>
-        /// <returns>
-        /// The <see cref="IList"/>.
-        /// </returns>
         public virtual IList<T> GetAll()
         {
             return _collection.FindSync(new BsonDocument()).ToList();
         }
 
-        /// <summary>
-        /// The get by id.
-        /// </summary>
-        /// <param name="id">
-        /// The id.
-        /// </param>
-        /// <returns>
-        /// The <see cref="T"/>.
-        /// </returns>
-        public virtual T GetById(string id)
+        public virtual T GetById(long id)
         {
-            return _collection.FindSync(t => t._id == id).ToEnumerable().FirstOrDefault();
+            return _collection.FindSync(t => t.Id == id).ToEnumerable().FirstOrDefault();
         }
 
-        /// <summary>
-        /// The replace.
-        /// </summary>
-        /// <param name="entity">
-        /// The entity.
-        /// </param>
         public virtual void Replace(T entity)
         {
-            _collection.ReplaceOne(t => t._id == entity._id, entity);
+            _collection.ReplaceOne(t => t.Id == entity.Id, entity);
         }
 
-        /// <summary>
-        /// The search for.
-        /// </summary>
-        /// <param name="predicate">
-        /// The predicate.
-        /// </param>
-        /// <returns>
-        /// The <see cref="IList"/>.
-        /// </returns>
         public virtual IList<T> SearchFor(Expression<Func<T, bool>> predicate)
         {
             var r = _collection.AsQueryable().Where(predicate.Compile()).ToList();
@@ -137,7 +82,7 @@
         /// <param name="entity"></param>
         public virtual void Update(T entity)
         {
-            _collection.ReplaceOne(t => t._id == entity._id, entity);
+            _collection.ReplaceOne(t => t.Id == entity.Id, entity);
         }
     }
 }

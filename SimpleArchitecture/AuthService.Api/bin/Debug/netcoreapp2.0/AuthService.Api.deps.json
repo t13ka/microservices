@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "48aa1d55397e9d60563258b6656ebb210cb75bee"
+    "signature": "e144ffde72f53cb9f462a69181a04f9339c0e23e"
   },
   "compilationOptions": {
     "defines": [
@@ -16,7 +16,7 @@
     "optimize": false,
     "keyFile": "",
     "emitEntryPoint": true,
-    "xmlDoc": false,
+    "xmlDoc": true,
     "debugType": "portable"
   },
   "targets": {
@@ -34,6 +34,17 @@
         },
         "compile": {
           "AuthService.Api.dll": {}
+        }
+      },
+      "CryptoHelper/3.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoHelper.dll": {}
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoHelper.dll": {}
         }
       },
       "Libuv/1.10.0": {
@@ -3997,8 +4008,10 @@
       "AuthService.Services/1.0.0": {
         "dependencies": {
           "AuthService.Core": "1.0.0",
+          "CryptoHelper": "3.0.0",
           "Microsoft.Extensions.Options": "2.0.0",
-          "MongoDB.Driver": "2.4.4"
+          "MongoDB.Driver": "2.4.4",
+          "System.IdentityModel.Tokens.Jwt": "5.1.4"
         },
         "runtime": {
           "AuthService.Services.dll": {}
@@ -4190,6 +4203,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "CryptoHelper/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CUCXoKUZ1XQSU5+TL2p5BkA6hSLHF4aBaSRNbxzTLQ6MPf1PEBLI1AH636ptL5iz0gYVieWWZu43Qn5j49LE/A==",
+      "path": "cryptohelper/3.0.0",
+      "hashPath": "cryptohelper.3.0.0.nupkg.sha512"
     },
     "Libuv/1.10.0": {
       "type": "package",
