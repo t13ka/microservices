@@ -1,6 +1,8 @@
 ﻿namespace AuthService.Services.Database
 {
+    using System;
     using System.Linq;
+    using System.Threading;
 
     using AuthService.Core;
 
@@ -18,19 +20,35 @@
     {
         private static long Counter;
 
+        public static object Locker = new object();
+
         public object GenerateId(object container, object document)
         {
             var collection = (IMongoCollection<T>)container;
 
-            var lastLastOrDefault = collection.AsQueryable().OrderByDescending(t => t.Id).FirstOrDefault();
-            if (lastLastOrDefault != null)
+            try
             {
-                Counter = lastLastOrDefault.Id;
-                Counter++;
-                return Counter;
-            }
+                Monitor.Enter(Locker);
 
-            Counter++;
+                var lastLastOrDefault = collection.AsQueryable().OrderByDescending(t => t.Id).FirstOrDefault();
+                if (lastLastOrDefault != null)
+                {
+                    Counter = lastLastOrDefault.Id;
+                    Counter++;
+                }
+                else
+                {
+                    Counter++;
+                }
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+            finally
+            {
+                Monitor.Exit(Locker);
+            }
 
             return Counter;
         }

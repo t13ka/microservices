@@ -8,10 +8,10 @@
     public class GetJwtTokenRequest
     {
         /// <summary>
-        /// Gets or sets the login.
+        /// Gets or sets the email.
         /// </summary>
         [Required]
-        public string Login { get; set; }
+        public string Email { get; set; }
 
         /// <summary>
         /// Gets or sets the password.

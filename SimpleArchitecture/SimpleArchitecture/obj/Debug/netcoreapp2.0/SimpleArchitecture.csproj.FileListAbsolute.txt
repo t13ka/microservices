@@ -8,3 +8,4 @@ W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\SimpleArchitecture\obj\
 W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\SimpleArchitecture\obj\Debug\netcoreapp2.0\SimpleArchitecture.AssemblyInfo.cs
 W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\SimpleArchitecture\obj\Debug\netcoreapp2.0\SimpleArchitecture.dll
 W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\SimpleArchitecture\obj\Debug\netcoreapp2.0\SimpleArchitecture.pdb
+W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\SimpleArchitecture\obj\Debug\netcoreapp2.0\SimpleArchitecture.csprojResolveAssemblyReference.cache

@@ -3,8 +3,13 @@ using System.Text;
 
 namespace AuthService.Services.Utils
 {
+    using System.Collections.Generic;
     using System.IdentityModel.Tokens.Jwt;
     using System.Security.Claims;
+
+    using AuthService.Services.Domain;
+
+    using CryptoHelper;
 
     using Microsoft.IdentityModel.Tokens;
 
@@ -35,12 +40,30 @@ namespace AuthService.Services.Utils
                 notBefore: now,
                 claims: identity.Claims,
                 expires: now.Add(span),
-                signingCredentials: new Microsoft.IdentityModel.Tokens.SigningCredentials(
+                signingCredentials: new SigningCredentials(
                     GetSymmetricSecurityKey(),
-                    Microsoft.IdentityModel.Tokens.SecurityAlgorithms.HmacSha256));
+                    SecurityAlgorithms.HmacSha256));
             var encodedJwt = new JwtSecurityTokenHandler().WriteToken(jwt);
             return encodedJwt;
         }
-      
+
+        public static ClaimsIdentity GetIdentity(User user)
+        {
+            var claims = new List<Claim>
+                             {
+                                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                                 new Claim("email", user.Email.ToLower()),
+                                 new Claim("sub", user.Id.ToString()),
+                                 new Claim("name", user.Name),
+                             };
+
+            var claimsIdentity = new ClaimsIdentity(
+                claims,
+                "Token",
+                ClaimsIdentity.DefaultNameClaimType,
+                ClaimsIdentity.DefaultRoleClaimType);
+
+            return claimsIdentity;
+        }
     }
 }

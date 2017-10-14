@@ -6,3 +6,4 @@ W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Core\obj\De
 W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Core\obj\Debug\netcoreapp2.0\AuthService.Core.AssemblyInfo.cs
 W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Core\obj\Debug\netcoreapp2.0\AuthService.Core.dll
 W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Core\obj\Debug\netcoreapp2.0\AuthService.Core.pdb
+W:\Projects\Repos\t13ka\microservices\SimpleArchitecture\AuthService.Core\obj\Debug\netcoreapp2.0\AuthService.Core.csprojResolveAssemblyReference.cache

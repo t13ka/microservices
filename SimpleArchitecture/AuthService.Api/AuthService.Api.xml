@@ -35,6 +35,14 @@
             The jwt token controller.
             </summary>
         </member>
+        <member name="M:AuthService.Api.Controllers.JwtTokenController.#ctor(AuthService.Services.IUsersService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AuthService.Api.Controllers.JwtTokenController"/> class.
+            </summary>
+            <param name="userService">
+            The user service.
+            </param>
+        </member>
         <member name="T:AuthService.Api.Controllers.RegistrationController">
             <summary>
             The registration controller.
@@ -53,9 +61,9 @@
             The get jwt token request.
             </summary>
         </member>
-        <member name="P:AuthService.Api.Dto.Request.GetJwtTokenRequest.Login">
+        <member name="P:AuthService.Api.Dto.Request.GetJwtTokenRequest.Email">
             <summary>
-            Gets or sets the login.
+            Gets or sets the email.
             </summary>
         </member>
         <member name="P:AuthService.Api.Dto.Request.GetJwtTokenRequest.Password">
