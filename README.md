@@ -1,4 +1,5 @@
 # microservices
 
+Simple architecture for showing a one way to implement microservices in your applications.
+Stack: net core 2, rabbit mq, masstransit, mongo db
 
-Simple project. Simple architecture for showing an one way to implement stateful- microservices in yours applications using by net core v2.
